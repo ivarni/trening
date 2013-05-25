@@ -32,6 +32,10 @@ module.exports = function(grunt) {
             html: {
                 files: ['**/*.html'],
                 tasks: ['clean', 'copy']
+            },
+            css: {
+                files: ['**/*.css'],
+                tasks: ['clean', 'copy']
             }
         },
         karma: {
