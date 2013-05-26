@@ -26,15 +26,15 @@ module.exports = function(grunt) {
                 livereload: true
             },
             scripts: {
-                files: ['**/*.js'],
+                files: ['src/**/*.js'],
                 tasks: ['clean', 'copy']
             },
             html: {
-                files: ['**/*.html'],
+                files: ['src/**/*.html'],
                 tasks: ['clean', 'copy']
             },
             css: {
-                files: ['**/*.css'],
+                files: ['src/**/*.css'],
                 tasks: ['clean', 'copy']
             }
         },
