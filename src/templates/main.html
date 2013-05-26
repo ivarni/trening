@@ -1,3 +1,39 @@
-<ul class="menu">
-    <li ng-repeat="choice in choices" ng-class="active(choice)"><a href="#{{choice.url}}" ng-click="navigate(choice)">{{choice.text}}</a></li>
-</ul>
+<!--ul class="dark-tab-bar">
+    <a ng-repeat="choice in choices" ng-class="down(choice)" href="#{{choice.url}}" ng-click="navigate(choice)">{{choice.text}}</a>
+</ul-->
+
+<div class="topcoat-navigation-bar">
+    <div class="topcoat-navigation-bar__item left quarter">
+        <a class="topcoat-icon-button--quiet" ng-click="showNavigation = !showNavigation">
+          <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+        </a>
+    </div>
+    <div class="topcoat-navigation-bar__item center half">
+        <h1 class="topcoat-navigation-bar__title">{{selected.text}}</h1>
+    </div>
+    <div class="topcoat-navigation-bar__item right quarter">
+        <a class="topcoat-icon-button--quiet">
+          <span class="topcoat-icon topcoat-icon--edit"></span>
+        </a>
+    </div>
+</div>
+
+<div ng-show="showNavigation" class="topcoat-list__container">
+  <ul class="topcoat-list">
+    <li ng-class="{ 'topcoat-list__item--first' : {{$first}}, 'topcoat-list__item': {{!$first}} }" ng-repeat="choice in choices">
+      <a href="#{{choice.url}}">{{choice.text}}</a>
+    </li>
+  </ul>
+</div>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed elit sed lectus accumsan accumsan. Proin cursus vulputate dolor, ullamcorper convallis nunc porta at. Quisque vel tellus massa. Duis semper magna quis orci interdum varius. Praesent in magna sed nunc lobortis commodo. Etiam tincidunt laoreet massa dictum accumsan. Vestibulum massa ligula, sagittis in tristique quis, iaculis ac risus. Ut tempus eros in nulla scelerisque aliquet. Curabitur et leo vel arcu vestibulum aliquam eget quis neque. Etiam vitae nulla nec purus porttitor vulputate gravida eu leo. Aenean dictum erat eget eros sodales commodo. Maecenas facilisis libero in dolor pulvinar viverra. Maecenas vehicula odio quis lorem imperdiet et venenatis leo dictum. Sed arcu mi, placerat vel porta vel, imperdiet at nisi. Nulla adipiscing pellentesque nibh in vulputate. Maecenas in nisl ipsum, malesuada iaculis dolor.
+</p>
+Quisque odio augue, ultricies non rutrum id, dignissim nec augue. Praesent ac enim lorem, a viverra mauris. Duis rutrum eros vitae nulla dictum ut sagittis elit elementum. In nulla mauris, elementum nec tempor sed, lobortis nec turpis. Nunc vitae risus eu libero molestie rutrum a at enim. Fusce hendrerit scelerisque arcu, nec sagittis libero tincidunt in. Nullam posuere felis vel nibh vehicula et ultricies justo laoreet. In scelerisque ipsum non est placerat adipiscing. Ut at sapien a neque aliquet eleifend. Nam a semper enim.
+<p>
+Vivamus ut lobortis mauris. Suspendisse dignissim ornare magna pellentesque lobortis. Vivamus ultrices erat nec magna auctor convallis. Nullam porta sagittis nibh, at pulvinar augue ultrices blandit. Phasellus non pretium tellus. Nullam placerat enim dolor, non ornare eros. Aenean sit amet nunc in massa lacinia sodales nec a massa. Sed mattis porttitor adipiscing.
+</p>
+In tempor lacinia orci eget vulputate. Sed gravida, libero porttitor pellentesque auctor, eros erat mollis est, non hendrerit libero orci a sapien. Pellentesque volutpat sapien eu neque semper vulputate. Integer ac adipiscing sapien. Pellentesque ornare odio elit. Nulla facilisis nibh vitae metus convallis pharetra. Mauris accumsan vestibulum eros, at vestibulum magna tristique at. Pellentesque in velit vitae sapien molestie lobortis ut eu ligula. Nunc eget turpis odio, nec mollis ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse arcu dui, blandit non fringilla ac, euismod ac massa. Aenean viverra arcu cursus quam eleifend viverra.
+<p>
+Aenean quam neque, aliquet vel pulvinar eu, aliquet quis est. Fusce non tortor ac sem suscipit suscipit. Nullam hendrerit risus id elit auctor tempor. Nam facilisis dui et ligula malesuada vulputate. Duis ut ligula eu magna eleifend consectetur. Maecenas quis diam et urna dignissim vulputate. Integer sed odio sed libero convallis convallis. Nam luctus erat nec risus eleifend laoreet. Curabitur luctus, lorem sit amet vestibulum placerat, ligula tortor lobortis sapien, at porta urna lorem sed arcu. Praesent ac mollis orci. Quisque accumsan, eros ut cursus accumsan, sem nibh gravida augue, eget dictum leo nunc tristique libero. Phasellus venenatis, arcu a sagittis facilisis, lacus arcu consequat tortor, sed porttitor nisl felis eu massa.
+</p>
