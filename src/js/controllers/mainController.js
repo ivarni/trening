@@ -2,15 +2,14 @@
     angular.module('trening')
     .controller('MainController', ['$scope', '$location', function($scope, $location) {
 
-        $scope.choices = [
-            { text: 'Exercises', url: '/exercises' },
-            { text: 'Planner' , url: '/planner'}
+        $scope.menuItems = [
+            { url: "#/exercises", name: "Exercies" },
+            { url: "#/planner", name: "Planner" }
         ];
-        $scope.selected = $scope.choices.filter(function(c) { 
-            return c.url === $location.url();
-        })[0] || $scope.choices[0];
+        $scope.selected = function(item) {
+            return $location.path() === item.url.substring(1) ? 'selected' : '';
+        }
 
-        $scope.showNavigation = false;
 
     }]);
 })();

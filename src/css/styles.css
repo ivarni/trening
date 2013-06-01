@@ -1,0 +1,29 @@
+#trening {
+    font-size: 62.5%;
+}
+
+#main {
+    font-size: 1.6em;
+    padding: 1em;
+}
+
+.nav {
+    list-style: none;
+    font-size: 1.5em;
+}
+.nav li {
+    display: inline-block;
+    padding: .5em;
+    margin-right: .5em;
+    border: .1em solid;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+}
+.selected {
+    background-color: lightgrey;
+}
+.nav a {
+    text-decoration: none;
+    color: black;
+}
