@@ -27,11 +27,11 @@ module.exports = function(grunt) {
             },
             scripts: {
                 files: ['src/**/*.js'],
-                tasks: ['clean', 'copy']
+                tasks: ['clean', 'compass', 'copy']
             },
             html: {
                 files: ['src/**/*.html'],
-                tasks: ['clean', 'copy']
+                tasks: ['clean', 'compass', 'copy']
             },
             css: {
                 files: ['src/**/*.scss'],
