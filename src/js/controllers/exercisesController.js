@@ -15,6 +15,13 @@
             $scope.exercises.splice(index, 1);
             $scope.selectedExercise = $scope.exercises[( index - 1 < 0 ? 0 : index - 1)];
         }
+        $scope.addExercise = function() {
+            $scope.showAdd = true;
+            $scope.selectedExercise = null;
+        }
+
+        //TODO: DELETE
+        $scope.addExercise();
 
     }]);
 })();

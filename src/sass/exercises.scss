@@ -1,3 +1,24 @@
+.add_exercise {
+    text-align: center;
+    margin-bottom: 1em;
+    padding: 1em;
+
+    display: inline-block;
+    
+    border: .1em solid;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    border-radius: 1em;
+}
+
+.add_exercise span {
+    padding-left: .5em;
+}
+
+.add_exercise input {
+    padding-left: .5em;
+}
+
 .exercises li {
     padding: 1em;
     margin-bottom: .5em;

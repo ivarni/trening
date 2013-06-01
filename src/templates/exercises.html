@@ -1,5 +1,20 @@
 <div id="exercises">
 
+    <div class="add_exercise" ng-click="addExercise()">
+        <i class="icon-plus" ng-hide="showAdd"></i><span ng-hide="showAdd">Add exercise</span>
+        <div ng-show="showAdd">
+            <form>
+                <div class="input">
+                    <label>Name:</label>
+                    <input type="text" />
+                </div>
+                <div class="input">
+                    <label>10 RM:</label>
+                    <input type="number" />
+                </div>
+            </form>
+        </div>
+    </div>
     <ul class="exercises">
         <div ng-repeat="exercise in exercises">
             <li ng-click="selectExercise(exercise)" ng-class="selected(exercise)">

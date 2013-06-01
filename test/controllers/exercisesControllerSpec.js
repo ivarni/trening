@@ -40,4 +40,11 @@ describe('Exercises Controller', function () {
         expect(scope.selectedExercise).toBe(scope.exercises[1]);        
     });
 
+    it('shows the add exercise input', function() {
+        scope.addExercise();
+
+        expect(scope.showAdd).toBeTruthy();
+        expect(scope.selectedExercise).toBeNull();
+    });
+
 });
