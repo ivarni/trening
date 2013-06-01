@@ -7,7 +7,8 @@
             </li>
             <div class="exercise_details" ng-show="selectedExercise == exercise">
                 <label>10 RM</label><input type="number" ng-model="exercise.rm" /> kg
-            </div>            
+                <i class="icon-trash" ng-click="deleteExercise(exercise)"></i>
+            </div>
         </div>
     </ul>
 

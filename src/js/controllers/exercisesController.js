@@ -10,6 +10,11 @@
         $scope.selected = function(exercise) {
             return exercise === $scope.selectedExercise ? 'selected' : '';
         }
+        $scope.deleteExercise = function(exercise) {
+            var index = $scope.exercises.indexOf(exercise);
+            $scope.exercises.splice(index, 1);
+            $scope.selectedExercise = $scope.exercises[( index - 1 < 0 ? 0 : index - 1)];
+        }
 
     }]);
 })();

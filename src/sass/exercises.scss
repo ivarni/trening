@@ -14,12 +14,14 @@
     padding: 1em;
     margin-bottom: .5em;
 
+    line-height: 2em;
+
     background-color: lightblue;
 
     border: .1em solid;
     -webkit-border-radius: 1em;
     -moz-border-radius: 1em;
-    border-radius: 1em;    
+    border-radius: 1em;
 }
 
 .exercise_details label {
@@ -28,6 +30,11 @@
 }
 
 .exercise_details input {
-    line-height: 2em;
     text-align: center;
+}
+
+.exercise_details .icon-trash {
+    float: right;
+    line-height: inherit;
+    font-size: 2em;
 }
