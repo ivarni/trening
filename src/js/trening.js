@@ -1,10 +1,10 @@
 (function() {
     angular
-    .module('trening', [])
+    .module('trening', ['trening.services'])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/exercises', {
-            templateUrl: 'templates/main.html',
-            controller: 'MainController'
+            templateUrl: 'templates/exercises.html',
+            controller: 'ExercisesController'
         });
         $routeProvider.when('/planner', {
             templateUrl: 'templates/main.html',
