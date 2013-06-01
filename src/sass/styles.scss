@@ -9,5 +9,9 @@
     padding: 1em;
 }
 
+.selected {
+    background-color: lightgrey;
+}
+
 @import "navigation";
 @import "exercises"

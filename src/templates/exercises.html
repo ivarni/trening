@@ -1,9 +1,14 @@
 <div id="exercises">
 
     <ul class="exercises">
-        <li ng-repeat="exercise in exercises">
-            {{exercise.name}}
-        </li>
+        <div ng-repeat="exercise in exercises">
+            <li ng-click="selectExercise(exercise)" ng-class="selected(exercise)">
+                {{exercise.name}}
+            </li>
+            <div class="exercise_details" ng-show="selectedExercise == exercise">
+                details
+            </div>            
+        </div>
     </ul>
 
 </div>
