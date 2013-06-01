@@ -34,8 +34,16 @@ module.exports = function(grunt) {
                 tasks: ['clean', 'copy']
             },
             css: {
-                files: ['src/**/*.css'],
-                tasks: ['clean', 'copy']
+                files: ['src/**/*.scss'],
+                tasks: ['clean', 'compass' ,'copy']
+            }
+        },
+        compass: {
+            dev: {
+                options: {
+                    sassDir: 'src/sass',
+                    cssDir: 'public/css'
+                }
             }
         },
         karma: {
@@ -48,6 +56,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-karma');
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
