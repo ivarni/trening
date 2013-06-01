@@ -3,7 +3,7 @@
     .controller('MainController', ['$scope', '$location', function($scope, $location) {
 
         $scope.menuItems = [
-            { url: "#/exercises", name: "Exercies" },
+            { url: "#/exercises", name: "Exercises" },
             { url: "#/planner", name: "Planner" }
         ];
         $scope.selected = function(item) {
