@@ -1,9 +1,33 @@
 .exercises li {
     padding: 1em;
-    text-align: center;
     margin-bottom: .5em;
+
+    text-align: center;
+    
     border: .1em solid;
     -webkit-border-radius: 1em;
     -moz-border-radius: 1em;
     border-radius: 1em;
+}
+
+.exercise_details {
+    padding: 1em;
+    margin-bottom: .5em;
+
+    background-color: lightblue;
+
+    border: .1em solid;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    border-radius: 1em;    
+}
+
+.exercise_details label {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.exercise_details input {
+    line-height: 2em;
+    text-align: center;
 }

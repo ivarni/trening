@@ -5,10 +5,10 @@
         return {
             getExercises: function() {
                 return [
-                    { name: 'Bicepscurl'},
-                    { name: 'Rygghev'},
-                    { name: 'Knebøy'},
-                    { name: 'Brystpress'}
+                    { name: 'Bicepscurl', rm: 12 },
+                    { name: 'Rygghev', rm: 10 },
+                    { name: 'Knebøy', rm: 60 },
+                    { name: 'Brystpress', rm: 50 }
                 ];
             }
         }

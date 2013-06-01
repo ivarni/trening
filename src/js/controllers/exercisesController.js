@@ -2,8 +2,8 @@
     angular.module('trening')
     .controller('ExercisesController', ['$scope', 'dataService', function($scope, dataService) {
 
-        $scope.selectedExercise = null;
         $scope.exercises = dataService.getExercises();
+        $scope.selectedExercise = $scope.exercises[0];
         $scope.selectExercise = function(exercise) {
             $scope.selectedExercise = exercise;
         }
