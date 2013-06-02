@@ -13,12 +13,12 @@
     padding-left: .5em;
 }
 
-.add_exercise .form-horizontal {
+.form-horizontal {
     width: 50%;
     margin: 0 auto;
 }
 
-.add_exercise .controls {
+.controls {
     text-align: left;
 }
 
@@ -46,15 +46,6 @@
     -webkit-border-radius: 1em;
     -moz-border-radius: 1em;
     border-radius: 1em;
-}
-
-.exercise_details label {
-    margin-left: 2em;
-    margin-right: 2em;
-}
-
-.exercise_details input {
-    text-align: center;
 }
 
 .exercise_details .icon-trash {

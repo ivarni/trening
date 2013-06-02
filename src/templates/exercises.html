@@ -37,8 +37,15 @@
                 {{exercise.name}}
             </li>
             <div class="exercise_details" ng-show="selectedExercise == exercise">
-                <label>10 RM</label><input type="number" ng-model="exercise.rm" /> kg
                 <i class="icon-trash" ng-click="deleteExercise(exercise)"></i>
+                <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="input10RM">10 RM</label>
+                        <div class="controls">
+                            <input type="number" id="input10RM" ng-model="exercise.rm" />
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </ul>
