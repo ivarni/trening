@@ -1,31 +1,33 @@
 <div id="exercises">
 
-    <div class="add_exercise" ng-click="addExercise()">
-        <i class="icon-plus" ng-hide="showAdd"></i><span ng-hide="showAdd">Add exercise</span>
+    <div class="add_exercise">
+        <div ng-click="addExercise()">
+            <i class="icon-plus" ng-hide="showAdd"></i><span ng-hide="showAdd">Add exercise</span>
+        </div>
         <div ng-show="showAdd">
 
-        <form class="form-horizontal">
-    
-            <div class="control-group">
-                <label class="control-label" for="inputName">Name</label>
-                <div class="controls">
-                    <input type="text" id="inputName" placeholder="Name">
+            <form class="form-horizontal">
+       
+                <div class="control-group">
+                    <label class="control-label" for="inputName">Name</label>
+                    <div class="controls">
+                        <input type="text" id="inputName" ng-model="newExercise.name" placeholder="Name">
+                    </div>
                 </div>
-            </div>
-    
-            <div class="control-group">
-                <label class="control-label" for="input10RM">10 RM</label>
-                <div class="controls">
-                    <input type="number" id="input10RM" placeholder="10 RM">
+        
+                <div class="control-group">
+                    <label class="control-label" for="input10RM">10 RM</label>
+                    <div class="controls">
+                        <input type="number" id="input10RM" ng-model="newExercise.rm" placeholder="10 RM">
+                    </div>
                 </div>
-            </div>
 
-            <div class="control-group">
-                <div class="controls">
-                    <button type="submit" class="btn">Save</button>
+                <div class="control-group">
+                    <div class="controls">
+                        <button type="submit" class="btn" ng-click="saveExercise()">Save</button>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
 
         </div>
     </div>

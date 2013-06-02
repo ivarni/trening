@@ -37,7 +37,7 @@ describe('Exercises Controller', function () {
         scope.deleteExercise(scope.exercises[2]);
 
         expect(scope.exercises.length).toBe(2);
-        expect(scope.selectedExercise).toBe(scope.exercises[1]);        
+        expect(scope.selectedExercise).toBe(scope.exercises[1]);
     });
 
     it('shows the add exercise input', function() {
@@ -45,6 +45,20 @@ describe('Exercises Controller', function () {
 
         expect(scope.showAdd).toBeTruthy();
         expect(scope.selectedExercise).toBeNull();
+    });
+
+    it('saves a new exercise', function() {
+        scope.newExercise = {
+            name: 'foo',
+            rm: 12
+        };
+        scope.saveExercise();
+
+        expect(scope.showAdd).toBeFalsy();
+        expect(scope.exercises.length).toBe(5);
+        expect(scope.exercises[4].name).toBe('foo');
+        expect(scope.exercises[4].rm).toBe(12);
+        expect(scope.selectedExercise).toBe(scope.exercises[4]);        
     });
 
 });

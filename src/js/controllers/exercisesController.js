@@ -19,9 +19,16 @@
             $scope.showAdd = true;
             $scope.selectedExercise = null;
         }
+        $scope.saveExercise = function() {
+            $scope.showAdd = false;
 
-        //TODO: DELETE
-        $scope.addExercise();
+            var exercise = {
+                name: $scope.newExercise.name,
+                rm: $scope.newExercise.rm
+            };
+            $scope.exercises.push(exercise);
+            $scope.selectedExercise = exercise;
+        }
 
     }]);
 })();
