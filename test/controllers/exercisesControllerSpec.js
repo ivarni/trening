@@ -28,6 +28,15 @@ describe('Exercises Controller', function () {
         expect(scope.selected(scope.exercises[1])).toEqual('');
     });
 
+    it('does not select an exercise while adding a new one', function() {
+        scope.selectExercise(scope.exercises[1]);
+        scope.addExercise();
+        scope.selectExercise(scope.exercises[1]);
+
+        expect(scope.showAdd).toBeTruthy();
+        expect(scope.selectedExercise).toBeNull();
+    });
+
     it('deletes exercises', function() {
         scope.deleteExercise(scope.exercises[0]);
 
@@ -58,7 +67,21 @@ describe('Exercises Controller', function () {
         expect(scope.exercises.length).toBe(5);
         expect(scope.exercises[4].name).toBe('foo');
         expect(scope.exercises[4].rm).toBe(12);
-        expect(scope.selectedExercise).toBe(scope.exercises[4]);        
+        expect(scope.selectedExercise).toBe(scope.exercises[4]);
+    });
+
+    it('cancels a save', function() {
+        scope.addExercise();
+        scope.newExercise = {
+            name: 'foo',
+            rm: 12
+        };        
+        scope.cancelAdd();
+
+        expect(scope.showAdd).toBeFalsy();
+        expect(scope.newExercise.name).toBeNull();
+        expect(scope.newExercise.rm).toBeNull();
+        expect(scope.selectedExercise).toBe(scope.exercises[0]);
     });
 
 });

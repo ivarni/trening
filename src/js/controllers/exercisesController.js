@@ -5,7 +5,9 @@
         $scope.exercises = dataService.getExercises();
         $scope.selectedExercise = $scope.exercises[0];
         $scope.selectExercise = function(exercise) {
-            $scope.selectedExercise = exercise;
+            if (!$scope.showAdd) {
+                $scope.selectedExercise = exercise;
+            }
         }
         $scope.selected = function(exercise) {
             return exercise === $scope.selectedExercise ? 'selected' : '';
@@ -18,6 +20,12 @@
         $scope.addExercise = function() {
             $scope.showAdd = true;
             $scope.selectedExercise = null;
+        }
+        $scope.cancelAdd = function() {
+            $scope.showAdd = false;
+            $scope.newExercise.name = null;
+            $scope.newExercise.rm = null;
+            $scope.selectedExercise = $scope.exercises[0];
         }
         $scope.saveExercise = function() {
             $scope.showAdd = false;
