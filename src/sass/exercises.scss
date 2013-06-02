@@ -13,29 +13,13 @@
     padding-left: .5em;
 }
 
-.input {
-    margin-bottom: 1em;
-}
-
-.input_label {
-    width: 30%;
-    display: inline-block;
-    margin-right: .5em;
-}
-
-.input_label label {
-    float: right;
-}
-
-.input_field {
+.add_exercise .form-horizontal {
     width: 50%;
-    display: inline-block;
+    margin: 0 auto;
 }
 
-.input_field input {
-    float: left;
-    padding-left: .5em;
-    margin-bottom: 0;
+.add_exercise .controls {
+    text-align: left;
 }
 
 .exercises li {

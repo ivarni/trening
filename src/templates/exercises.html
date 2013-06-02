@@ -3,24 +3,30 @@
     <div class="add_exercise" ng-click="addExercise()">
         <i class="icon-plus" ng-hide="showAdd"></i><span ng-hide="showAdd">Add exercise</span>
         <div ng-show="showAdd">
-            <form>
-                <div class="input">
-                    <div class="input_label">
-                        <label>Name:</label>
-                    </div>
-                    <div class="input_field">
-                        <input type="text" />
-                    </div>
+
+        <form class="form-horizontal">
+    
+            <div class="control-group">
+                <label class="control-label" for="inputName">Name</label>
+                <div class="controls">
+                    <input type="text" id="inputName" placeholder="Name">
                 </div>
-                <div class="input">
-                    <div class="input_label">
-                        <label>10 RM:</label>
-                    </div>
-                    <div class="input_field">
-                        <input type="number" />
-                    </div>
+            </div>
+    
+            <div class="control-group">
+                <label class="control-label" for="input10RM">10 RM</label>
+                <div class="controls">
+                    <input type="number" id="input10RM" placeholder="10 RM">
                 </div>
-            </form>
+            </div>
+
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn">Save</button>
+                </div>
+            </div>
+        </form>
+
         </div>
     </div>
     <ul class="exercises">
