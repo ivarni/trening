@@ -1,7 +1,11 @@
 @import "compass/reset";
+@import "bootstrap_overrides";
+
+@import "constants";
 
 #trening {
     font-size: 62.5%;
+    background-color: $background;
 }
 
 #main {
@@ -10,8 +14,8 @@
 }
 
 .selected {
-    background-color: lightgrey;
+    background-color: $backgroundDark;
 }
 
 @import "navigation";
-@import "exercises"
+@import "exercises";

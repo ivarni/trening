@@ -1,3 +1,5 @@
+@import "constants";
+
 .add_exercise {
     text-align: center;
     margin-bottom: 1em;
@@ -11,15 +13,6 @@
 
 .add_exercise span {
     padding-left: .5em;
-}
-
-.form-horizontal {
-    width: 50%;
-    margin: 0 auto;
-}
-
-.controls {
-    text-align: left;
 }
 
 .exercises li {
@@ -40,7 +33,7 @@
 
     line-height: 2em;
 
-    background-color: lightblue;
+    background-color: $backgroundDark;
 
     border: .1em solid;
     -webkit-border-radius: 1em;
