@@ -3,8 +3,6 @@
     margin-bottom: 1em;
     padding: 1em;
 
-    display: inline-block;
-    
     border: .1em solid;
     -webkit-border-radius: 1em;
     -moz-border-radius: 1em;
@@ -15,8 +13,29 @@
     padding-left: .5em;
 }
 
-.add_exercise input {
+.input {
+    margin-bottom: 1em;
+}
+
+.input_label {
+    width: 30%;
+    display: inline-block;
+    margin-right: .5em;
+}
+
+.input_label label {
+    float: right;
+}
+
+.input_field {
+    width: 50%;
+    display: inline-block;
+}
+
+.input_field input {
+    float: left;
     padding-left: .5em;
+    margin-bottom: 0;
 }
 
 .exercises li {
