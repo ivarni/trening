@@ -4,6 +4,7 @@
 
         $scope.exercises = dataService.getExercises();
         $scope.selectedExercise = $scope.exercises[0];
+        $scope.newExercise = {};
         $scope.selectExercise = function(exercise) {
             if (!$scope.showAdd) {
                 $scope.selectedExercise = exercise;
